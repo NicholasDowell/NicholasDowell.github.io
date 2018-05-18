@@ -1,0 +1,81 @@
+<html>
+  <title>NICHOLAS</title>
+  <body>
+    <p>NICHOLAS</p>
+
+    <canvas width="500" height="500"
+    onmousedown="drawBox(event);">
+
+    </canvas>
+
+    <style>
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #AAF;
+    }
+  </style>
+
+
+    <script>
+      let canvas = document.querySelector('canvas');
+      let c = canvas.getContext('2d');
+      c.fillStyle = 'red';
+      c.strokeRect(7, 7, 50, 30);
+
+      function drawBox(event) {
+        let x = event.x;
+        let y = event.y;
+        c.strokeStyle = 'orange'
+        c.strokeRect(x-10, y-10, 20, 20);
+        drawExp(x,y,70);
+      }
+
+      function drawPlus(centerX, centerY, sideLength) {
+        c.beginPath();
+
+        c.moveTo(centerX-10, centerY);
+        c.lineTo(centerX+10, centerY);
+
+        c.moveTo(centerX, centerY-10);
+        c.lineTo(centerX, centerY+10);
+
+
+        c.closePath();
+        c.stroke();
+        }
+
+        function drawExp(centerX, centerY, sideLength) {
+          c.beginPath();
+          c.moveTo(centerX, centerY);
+
+          let n;
+          for (n = 0; n < 50; n ++){
+            c.lineTo(centerX+8*n, centerY-Math.pow(n,2));
+            c.moveTo(centerX+8*n, centerY-Math.pow(n,2));
+          }
+          c.moveTo(centerX, centerY);
+
+          for (n = 0; n < 50; n ++){
+            c.lineTo(centerX-8*n, centerY-Math.pow(n,2));
+            c.moveTo(centerX-8*n, centerY-Math.pow(n,2));
+
+            mainLoop();
+          }
+
+          c.closePath();
+          c.stroke();
+          }
+          let position = 0
+          function mainLoop(){
+            c.strokeRect(7, 7, 50, 30);
+            //centerX += 1;
+            RequestAnimationFrame(mainLoop);
+          }
+
+
+    </script>
+
+  </body>
+</html>
