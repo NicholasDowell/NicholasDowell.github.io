@@ -21,6 +21,18 @@
 
 
     <script>
+
+
+    var button = document.createElement("button");
+button.innerHTML = "Do Something";
+
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+
+button.addEventListener ("click", function() {
+  alert("did something");
+});
+
       let canvas = document.querySelector('canvas');
       let c = canvas.getContext('2d');
       c.fillStyle = 'red';
