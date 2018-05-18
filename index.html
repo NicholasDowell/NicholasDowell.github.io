@@ -1,12 +1,34 @@
 <!DOCTYPE html>
-//ece
 
 <html>
+  <head>
+    <style>
+
+    table, td {
+    border: 1px solid black;
+}
+  </style>
+  </head>
+
   <title>Welcome</title>
+
   <body>
+
     <h1>NICHOLAS</h1>
 
-    <table id = "mytable">
+    <button onclick="removeRow()">
+      Remove Row
+    </button>
+
+    <button onclick="addRow()">
+      Add Row
+    </button>
+
+    <button onclick="addColumn()">
+      Add Column
+    </button>
+
+    <table id="myTable">
       <tr>
     <td>cell 1</td>
     <td>cell 2</td>
@@ -18,21 +40,11 @@
 
     </table>
 
-<button onclick="myFunction()">Try it</button>
 
-    <style>
-    table, td {
-    border: 1px solid black;
-}
-  </style>
 
 
     <script>
 
-    function myFunction() {
-      let x = document.getElementById("myTable");
-      x.deleteRow(0);
-    }
 
     var button = document.createElement("button");
 button.innerHTML = "Do ";
@@ -43,6 +55,30 @@ body.appendChild(button);
 button.addEventListener ("click", function() {
   alert("did something");
 });
+    //add height options and width
+
+    function addColumn() {
+      let row = document.getElementById('myTable').rows[0];
+      let cell = row.insertCell(0);
+      cell.innerHTML = "Log";
+
+    }
+    function addRow() {
+      let table = document.getElementById('myTable');
+      let row = table.insertRow(0);
+      let cell1 = row.insertCell(0);
+      let cell2 = row.insertCell(1);
+      cell1.innerHTML = "Bog";
+      cell2.innerHTML = "Hog";
+    }
+
+    function removeRow() {
+      let table = document.getElementById("myTable");
+      table.deleteRow(0);
+    }
+
+
+
 
 
     </script>
