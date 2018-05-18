@@ -18,6 +18,7 @@
 
     </table>
 
+<button onclick="myFunction()">Try it</button>
 
     <style>
     table, td {
@@ -28,6 +29,10 @@
 
     <script>
 
+    function myFunction() {
+      let x = document.getElementById("myTable");
+      x.deleteRow(0);
+    }
 
     var button = document.createElement("button");
 button.innerHTML = "Do ";
