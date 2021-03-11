@@ -1,87 +1,16 @@
 <!DOCTYPE html>
-
-<html>
-  <head>
-    <style>
-
-    table, td {
-    border: 1px solid black;
-}
-  </style>
-  </head>
-
-  <title>Welcome</title>
-
-  <body>
-
-    <h1>NICHOLAS</h1> 
-    <button onclick="removeRow()">
-      Remove Row
-    </button>
-
-    <button onclick="addRow()">
-      Add Row
-    </button>
-
-    <button onclick="addColumn()">
-      Add Column
-    </button>
-
-    <table id="myTable">
-      <tr>
-    <td>cell 1</td>
-    <td>cell 2</td>
-  </tr>
-  <tr>
-    <td>cell 3</td>
-    <td>cell 4</td>
-  </tr>
-
-    </table>
-
-
-
-
-    <script>
-
-
-    var button = document.createElement("button");
-button.innerHTML = "Do ";
-
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(button);
-
-button.addEventListener ("click", function() {
-  alert("did something");
-});
-    //add height options and width
-
-    function addColumn() {
-      let row = document.getElementById('myTable').rows[0];
-      let cell = row.insertCell(0);
-      cell.innerHTML = "Log";
-//eeEE
-    }
-
-    function addRow() {
-      let table = document.getElementById('myTable');
-      let row = table.insertRow(0);
-      let cell1 = row.insertCell(0);
-      let cell2 = row.insertCell(1);
-      cell1.innerHTML = "Bog";
-      cell2.innerHTML = "Hog";
-    }
-
-    function removeRow() {
-      let table = document.getElementById("myTable");
-      table.deleteRow(0);
-    }
-
-
-
-
-
-    </script>
-
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <link rel="stylesheet" href="homeworkStyle.css">
+</head>
+<body>
+    <div id="tl" ></div>
+    <div id="t2" ></div>
+    <div id="t3" ></div>
+    <div id="t4" ></div>
+</body>
 </html>

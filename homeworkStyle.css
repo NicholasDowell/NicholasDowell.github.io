@@ -1,0 +1,87 @@
+#tl{
+    padding: 0px;
+    border: solid red 10px;
+    margin: 0px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    animation-name: tl;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes tl{
+    0% {border: solid red 10px;}
+    50%{left: 43%; top: 43%; border: solid red 10px;}
+    51%{border: solid blue 10px;}
+    99%{border: solid blue 10px;}
+    100%{left: 0%; top: 0%; border: solid red 10px;}
+
+}
+
+#t2{
+    padding: 0px;
+    border: solid green 10px;
+    margin: 0px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    top: 75%;
+    animation-name: t2;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes t2{
+    0% {border: solid green 10px;}
+    50%{left: 43%; top: 43%; border: solid green 10px;}
+    51%{border: solid yellow 10px;}
+    99%{border: solid yellow 10px;}
+    100%{left: 0%; top: 75%; border: solid green 10px;}
+}
+#t3{
+    padding: 0px;
+    border: solid yellow 10px;
+    margin: 0px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 89%;
+    top: 0%;
+    animation-name: t3;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes t3{
+    0% {border: solid yellow 10px;}
+    50%{left: 43%; top: 43%; border: solid yellow 10px;}
+    51%{border: solid green 10px;}
+    99%{border: solid green 10px;}
+    100%{left: 89%; top: 0%; border: solid yellow 10px;}
+}
+#t4{
+    padding: 0px;
+    border: solid blue 10px;
+    margin: 0px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 89%;
+    top: 75%;
+    animation-name: t4;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+@keyframes t4{
+    0% {border: solid blue 10px;}
+    50%{left: 43%; top: 43%; border: solid blue 10px;}
+    51%{border: solid red 10px;}
+    99%{border: solid red 10px;}
+    100%{left: 89%; top: 75%; border: solid blue 10px;}
+}
